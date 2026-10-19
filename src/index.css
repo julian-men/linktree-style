@@ -338,6 +338,10 @@ li a:focus-visible {
 }
 
 .window-status {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.5rem;
+  align-items: center;
   min-height: 1.5rem;
   padding: 0.25rem 0.5rem;
   color: var(--ink);
@@ -345,6 +349,27 @@ li a:focus-visible {
   border-top: var(--bevel-dark);
   font-family: var(--meta-font);
   font-size: 0.75rem;
+}
+
+.status-panel,
+.status-zone {
+  min-width: 0;
+  overflow: hidden;
+  padding: 0.1rem 0.35rem;
+  border-top: var(--bevel-dark);
+  border-left: var(--bevel-dark);
+  border-right: var(--bevel-light);
+  border-bottom: var(--bevel-light);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.status-panel {
+  min-height: 1.1rem;
+}
+
+.status-zone {
+  max-width: 10rem;
 }
 
 @media (max-width: 600px) {

@@ -13,7 +13,7 @@ function navigateToLink(link) {
   window.location.assign(link.url)
 }
 
-function AddressBar({ links }) {
+function AddressBar({ links, onStatusChange, onTemporaryStatus }) {
   const [command, setCommand] = useState('about:julian')
   const [error, setError] = useState('')
 
@@ -24,12 +24,14 @@ function AddressBar({ links }) {
 
     if (!destination) {
       setError(errorMessage)
+      onStatusChange('Address not found')
       return
     }
 
     setError('')
 
     if (destination.type === 'home') {
+      onTemporaryStatus('Home')
       document.getElementById('profile')?.scrollIntoView({
         behavior: 'auto',
         block: 'start',
@@ -37,12 +39,14 @@ function AddressBar({ links }) {
       return
     }
 
+    onTemporaryStatus(`Opening ${destination.link.label}...`)
     navigateToLink(destination.link)
   }
 
   function handleChange(event) {
     setCommand(event.target.value)
     setError('')
+    onStatusChange('Ready')
   }
 
   return (
