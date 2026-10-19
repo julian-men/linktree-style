@@ -21,7 +21,10 @@ export default [
       'react-refresh': reactRefresh,
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^(App|StrictMode)$' }],
+      'no-unused-vars': [
+        'error',
+        { varsIgnorePattern: '^(App|StrictMode|Profile|LinkCard)$' },
+      ],
       ...reactHooks.configs['recommended-latest'].rules,
       'react-refresh/only-export-components': [
         'warn',
