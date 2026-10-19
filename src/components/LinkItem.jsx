@@ -10,6 +10,7 @@ function LinkItem({ link }) {
           rel: 'noopener noreferrer',
         })}
       >
+        <img src={link.icon} alt="" aria-hidden="true" />
         {link.label}
       </a>
     </li>
