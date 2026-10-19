@@ -1,6 +1,7 @@
 import Profile from './components/Profile.jsx'
 import LinkItem from './components/LinkItem.jsx'
 import TimeGreeting from './components/TimeGreeting.jsx'
+import AddressBar from './components/AddressBar.jsx'
 import links from './data/links.js'
 
 function App() {
@@ -24,10 +25,7 @@ function App() {
           <span>Help</span>
         </div>
 
-        <div className="window-address" aria-hidden="true">
-          <span className="address-label">Address</span>
-          <span className="address-value">about:julian</span>
-        </div>
+        <AddressBar links={links} />
 
         <main>
           <TimeGreeting />

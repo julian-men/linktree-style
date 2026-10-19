@@ -2,7 +2,7 @@ import profileImage from '../assets/julian-mendoza-profile.png'
 
 function Profile() {
   return (
-    <header>
+    <header id="profile">
       <img
         src={profileImage}
         alt="Portrait of Julian Mendoza"
