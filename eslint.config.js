@@ -23,7 +23,10 @@ export default [
     rules: {
       'no-unused-vars': [
         'error',
-        { varsIgnorePattern: '^(App|StrictMode|Profile|LinkCard|LinkItem)$' },
+        {
+          varsIgnorePattern:
+            '^(App|StrictMode|Profile|LinkCard|LinkItem|TimeGreeting)$',
+        },
       ],
       ...reactHooks.configs['recommended-latest'].rules,
       'react-refresh/only-export-components': [

@@ -41,6 +41,32 @@ main {
   padding: var(--space-4) 0;
 }
 
+.time-greeting {
+  min-height: 6rem;
+  margin: 0 0 var(--space-2);
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  font-weight: 700;
+  font-family: var(--meta-font);
+  color: var(--color-muted);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.time-greeting p {
+  margin: 0;
+}
+
+.time-greeting time {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.time-greeting time + time {
+  font-size: 0.85rem;
+}
+
 header {
   display: grid;
   grid-template-columns: 12rem 1fr;
