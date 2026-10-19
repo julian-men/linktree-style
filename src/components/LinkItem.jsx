@@ -1,4 +1,4 @@
-function LinkCard({ link }) {
+function LinkItem({ link }) {
   const isExternal = link.url.startsWith('http')
 
   return (
@@ -10,11 +10,10 @@ function LinkCard({ link }) {
           rel: 'noopener noreferrer',
         })}
       >
-        <span>{link.label}</span>
-        <span>{link.description}</span>
+        {link.label}
       </a>
     </li>
   )
 }
 
-export default LinkCard
+export default LinkItem
