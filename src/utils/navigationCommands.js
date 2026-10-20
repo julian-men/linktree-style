@@ -11,6 +11,7 @@ const commandAliases = {
 }
 
 export function resolveNavigationCommand(command, links) {
+  // Normalize input once so aliases work regardless of case or surrounding spaces.
   const normalizedCommand = command.trim().toLowerCase()
 
   if (normalizedCommand === 'about:julian' || normalizedCommand === 'home') {

@@ -2,6 +2,7 @@ import { useRef } from 'react'
 
 function LinkItem({ link, onStatusChange }) {
   const isExternal = link.url.startsWith('http')
+  // Pointer and keyboard focus can overlap, so either one may keep the preview visible.
   const isHovered = useRef(false)
   const isFocused = useRef(false)
   const preview = `Open ${link.label}`

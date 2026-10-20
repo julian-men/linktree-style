@@ -10,6 +10,7 @@ function App() {
   const statusResetTimer = useRef(null)
 
   function clearStatusResetTimer() {
+    // Replace pending resets so rapid interactions cannot restore stale text.
     if (statusResetTimer.current) {
       window.clearTimeout(statusResetTimer.current)
       statusResetTimer.current = null
@@ -76,6 +77,7 @@ function App() {
           </section>
         </main>
 
+        {/* Inline address errors are announced separately, so this visual status stays hidden. */}
         <div className="window-status" aria-hidden="true">
           <span className="status-panel">{status}</span>
           <span className="status-zone">Internet zone</span>

@@ -25,7 +25,7 @@ export default [
         'error',
         {
           varsIgnorePattern:
-            '^(App|StrictMode|Profile|LinkCard|LinkItem|TimeGreeting|AddressBar)$',
+            '^(App|StrictMode|Profile|LinkItem|TimeGreeting|AddressBar)$',
         },
       ],
       ...reactHooks.configs['recommended-latest'].rules,
