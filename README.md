@@ -2,6 +2,10 @@
 
 A personal links page styled as a small early Internet Explorer / Windows 95-era browser window. It presents Julian's profile, projects, résumé, and contact link in a responsive React page.
 
+## Live Site
+
+[View the live site](https://julian-men.github.io/linktree-style/)
+
 ## Features
 
 - Time-of-day greeting, running local clock, and local date
@@ -77,4 +81,4 @@ The page uses semantic headings, lists, links, form labels, and an accessible li
 
 ## Deployment
 
-GitHub Pages deployment will be added next. The site does not have a verified live URL yet.
+The site is deployed with GitHub Pages. Vite builds the production files, and GitHub Actions automatically deploys successful builds from pushes to `main`.
